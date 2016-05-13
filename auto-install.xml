@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<AutomatedInstallation langpack="eng">
+<com.izforge.izpack.panels.hello.HelloPanel id="HelloPanel_0"/>
+<com.logicaldoc.installer.LDTargetPanel id="target_directory">
+<installpath>/opt/logicaldoc</installpath>
+</com.logicaldoc.installer.LDTargetPanel>
+<com.izforge.izpack.panels.packs.PacksPanel id="PacksPanel_2">
+<pack index="0" name="Base" selected="true"/>
+</com.izforge.izpack.panels.packs.PacksPanel>
+<com.izforge.izpack.panels.install.InstallPanel id="InstallPanel_3"/>
+<com.izforge.izpack.panels.userinput.UserInputPanel id="panel_registration">
+<entry key="organization" value="logicaldoc"/>
+<entry key="website" value="www.logicaldoc.com"/>
+<entry key="email" value="info@logicaldoc.com"/>
+<entry key="name" value="logicaldoc"/>
+</com.izforge.izpack.panels.userinput.UserInputPanel>
+<com.izforge.izpack.panels.userinput.UserInputPanel id="panel_database1">
+<entry key="dbengine" value="mysql"/>
+</com.izforge.izpack.panels.userinput.UserInputPanel>
+<com.izforge.izpack.panels.userinput.UserInputPanel id="panel_database2">
+<entry key="dbmanualurl" value="false"/>
+<entry key="dbpassword" value="logicaldoc"/>
+<entry key="dbhost" value="localhost"/>
+<entry key="dbport" value="3306"/>
+<entry key="dbdatabase" value="logicaldoc"/>
+<entry key="dbusername" value="logicaldoc"/>
+<entry key="dbinstance" value=""/>
+</com.izforge.izpack.panels.userinput.UserInputPanel>
+<com.izforge.izpack.panels.userinput.UserInputPanel id="panel_application">
+<entry key="setuppassword" value="logicaldoc"/>
+<entry key="shutdownport" value="9005"/>
+<entry key="httpport" value="8080"/>
+<entry key="architecture" value="64bit"/>
+<entry key="httpsport" value="8443"/>
+<entry key="maxmemory" value="1400"/>
+</com.izforge.izpack.panels.userinput.UserInputPanel>
+<com.izforge.izpack.panels.userinput.UserInputPanel id="panel_extapps">
+<entry key="openssl" value="/usr/bin/openssl"/>
+<entry key="clamscan" value="/usr/bin/clamscan"/>
+<entry key="tesseract" value="/usr/bin/tesseract"/>
+<entry key="ghostscript" value="/usr/bin/gs"/>
+<entry key="convert" value="/usr/bin/convert"/>
+<entry key="openoffice" value="/usr/lib/libreoffice"/>
+</com.izforge.izpack.panels.userinput.UserInputPanel>
+<com.izforge.izpack.panels.process.ProcessPanel id="panel_process"/>
+<com.izforge.izpack.panels.finish.FinishPanel id="FinishPanel_12"/>
+</AutomatedInstallation>
