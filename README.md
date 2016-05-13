@@ -4,11 +4,11 @@ Logicaldoc ( http://www.logicaldoc.com ) Docker image with mysql server
 How to run:
 open a console and execute
 
-$docker run -p 8080:8080 mcsaky/logicaldoc-mysql
+**$docker run -p 8080:8080 mcsaky/logicaldoc-mysql**
 
 or
 
-$sudo docker run -p 8080:8080 mcsaky/logicaldoc-mysql
+**$sudo docker run -p 8080:8080 mcsaky/logicaldoc-mysql**
 
 (depending on your settings)
 
@@ -25,4 +25,4 @@ services:
 ```
 
 after the image is started for the first time, you will be able to connect with a browser
-at http://localhost:8080 and login with username: admin, password: admin
+at http://localhost:8080 and login with username: *admin*, password: *admin*
