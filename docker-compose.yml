@@ -6,6 +6,14 @@ services:
     image: mcsaky/logicaldoc-mysql
     ports:
         - 8080:8080
+    volumes:
+        - mysqldata:/var/lib/mysql
+        - repodata:/opt/logicaldoc/repository
+volumes:
+    mysqldata:
+        external: true
+    repodata:
+        external: true
 
 
 
