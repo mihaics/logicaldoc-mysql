@@ -13,11 +13,13 @@ services:
  mysqldata:
    image: busybox
    volumes: 
-    - /var/lib/mysql
+    - /var/lib/mysql:/tmp/data/mysql
  repodata:
    image: busybox
    volumes:
-       - /opt/logicaldoc/repository
+       - /opt/logicaldoc/repository:/tmp/data/repository
+
+
 
 
 

@@ -1,14 +1,13 @@
 #!/bin/bash
 set -eo pipefail
-/etc/init.d/mysql restart
-/opt/logicaldoc/wait-for-it.sh 127.0.0.1:3306 -t 100
 if [ ! -d /opt/logicaldoc/tomcat ]; then
- echo "Installing logical doc"
+ printf "Installing logical doc\n"
+ mysqld_safe & sleep 10s
+ /opt/logicaldoc/wait-for-it.sh 127.0.0.1:3306 -t 100
  java -jar /opt/logicaldoc/logicaldoc-installer.jar /opt/logicaldoc/auto-install.xml
+ killall mysqld_safe & sleep 3s
 else
- printf "Logicaldoc already installed"
+ printf "Logicaldoc already installed\n"
 fi
-
-/etc/init.d/mysql stop
 
 
