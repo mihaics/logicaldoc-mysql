@@ -3,6 +3,22 @@ services:
  logicaldoc:
   build: ../logicaldoc-mysql
   container_name: logicaldoc
-  image: logicaldoc-mysql
+  image: mcsaky/logicaldoc-mysql
   ports:
    - 8080:8080
+  volumes_from:
+   - mysqldata
+   - repodata
+
+ mysqldata:
+   image: busybox
+   volumes: 
+    - /var/lib/mysql
+ repodata:
+   image: busybox
+   volumes:
+       - /opt/logicaldoc/repository
+
+
+
+

@@ -3,7 +3,7 @@ set -eo pipefail
 
 chown -R mysql:mysql "$DATADIR"
 # first run, database is not initialized
-if [ ! -d "$DATADIR/mysql" ]; then
+if [ ! -d "$DATADIR/logicaldoc" ]; then
 
  if [ -z "$MYSQL_ROOT_PASSWORD" ]; then
    MYSQL_ROOT_PASSWORD=mysqlroot
@@ -34,4 +34,6 @@ if [ ! -d "$DATADIR/mysql" ]; then
 # mysql -u $MYSQL_DBUSER --password="${MYSQL_DBPASS}" $MYSQL_DBNAME < /opt/logicaldoc/logicaldoc-dropbox.sql
 # echo "COMMIT" | mysql -u $MYSQL_DBUSER --password="${MYSQL_DBPASS}" $MYSQL_DBNAME
  killall mysqld_safe & sleep 3s
+else
+ printf "MySql already installed"
 fi
